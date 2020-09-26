@@ -1,0 +1,29 @@
+PODS:
+  - sample (0.0.1)
+  - Sentry (5.2.2):
+    - Sentry/Core (= 5.2.2)
+  - Sentry/Core (5.2.2)
+
+DEPENDENCIES:
+  - sample (from `..`)
+  - Sentry (from `https://github.com/getsentry/sentry-cocoa.git`, tag `5.2.2`)
+
+EXTERNAL SOURCES:
+  sample:
+    :path: ".."
+  Sentry:
+    :git: https://github.com/getsentry/sentry-cocoa.git
+    :tag: 5.2.2
+
+CHECKOUT OPTIONS:
+  Sentry:
+    :git: https://github.com/getsentry/sentry-cocoa.git
+    :tag: 5.2.2
+
+SPEC CHECKSUMS:
+  sample: f10dc27f2389c787c238faa243d44f45b54abf6b
+  Sentry: 8fa58a051237554f22507fb483b9a1de0171a2dc
+
+PODFILE CHECKSUM: 016f68f16a2772d09a441c03383da89e342b96fd
+
+COCOAPODS: 1.10.0.beta.1

@@ -8,7 +8,7 @@
 
 import Foundation
 import sample
-import Bugsnag
+import Sentry
 
 class CrashNSException: NSException {
     init(callStack:[NSNumber], exceptionType: String, message: String) {
@@ -34,8 +34,8 @@ class CrashNSException: NSException {
     }
 }
 
-class BugsnagCrashHandler: CrashkiosCrashHandler {
+class SentryCrashHandler: CrashkiosCrashHandler {
     override func crashParts(addresses: [KotlinLong], exceptionType: String, message: String) {
-        Bugsnag.notify(CrashNSException(callStack: addresses, exceptionType: exceptionType, message: message))
+        SentrySDK.capture(exception: CrashNSException(callStack: addresses, exceptionType: exceptionType, message: message))
     }
 }
